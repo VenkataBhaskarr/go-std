@@ -9,11 +9,11 @@ func NewList[T any]() *List[T] {
 }
 
 func(this *List[T]) add(item T) {
-  // add a given item
+
 }
 
 func(this *List[T]) get(index int){
-  // returns the element in that index
+ 
 }
 
 func(this *List[T]) set(index int, item T){
