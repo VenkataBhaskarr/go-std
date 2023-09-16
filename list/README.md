@@ -13,42 +13,42 @@ func main() {
     myList := list.NewList[string]()
 
     // Add elements
-    myList.add("Hello")
-    myList.add("World")
+    myList.Add("Hello")
+    myList.Add("World")
 
     // Get elements
-    value1 := myList.get(0) // Returns "Hello"
-    value2 := myList.get(1) // Returns "World"
+    value1 := myList.Get(0) // Returns "Hello"
+    value2 := myList.Get(1) // Returns "World"
 
     // Modify elements
-    myList.set(1, "New World")
+    myList.Set(1, "New World")
 
     // Remove elements
-    myList.remove(0)
+    myList.Remove(0)
 
     // Check size
-    size := myList.size() // Returns the number of elements in the list
+    size := myList.Size() // Returns the number of elements in the list
 
     // Check if empty
-    isEmpty := myList.isEmpty() // Returns true if the list is empty
+    isEmpty := myList.IsEmpty() // Returns true if the list is empty
 
     // Clear the list
-    myList.clear()
+    myList.Clear()
 
     // Check if an element is in the list
-    contains := myList.contains("Search Value")
+    contains := myList.Contains("Search Value")
 
     // Find the index of an element
-    index := myList.indexOf("Search Value")
+    index := myList.IndexOf("Search Value")
 
     // Create a sublist
-    sublist := myList.subList(1, 3)
+    sublist := myList.SubList(1, 3)
 
     // Sort the list
-    myList.sort()
+    myList.Sort()
 
     // Reverse the list
-    myList.reverse()
+    myList.Reverse()
 }
 ```
 
