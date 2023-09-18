@@ -1,22 +1,22 @@
 package list
 
 type List[T any] struct {
-  items []T
+	items []T
 }
 
 func NewList[T any]() *List[T] {
-  return &List[T]{}
+	return &List[T]{}
 }
 
-func(this *List[T]) Add(item T) {
+func (this *List[T]) Add(item T) {
 
 }
 
-func(this *List[T]) Get(index int){
- 
+func (this *List[T]) Get(index int) {
+
 }
 
-func(this *List[T]) Set(index int, item T){
+func (this *List[T]) Set(index int, item T) {
 
 }
 
@@ -49,5 +49,3 @@ func (this *List[T]) Sort() {
 
 func (this *List[T]) Reverse() {
 }
-
-// More to be added 
