@@ -36,6 +36,9 @@ func (this *LinkedList[T]) Add(item T) {
 	this.size += 1
 }
 func (this *LinkedList[T]) Get(index int) T {
+	if index < 0 || index > this.size {
+		panic("index out of range")
+	}
 	temp := this.head
 	for i := 0; i < index; i++ {
 		temp = temp.next
