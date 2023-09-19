@@ -97,9 +97,46 @@ func getHeight(node *Node) int {
 	return node.height
 }
 
-//func(this *Tree) Delete(Data int){
-//
-//}
+func (this *Tree) Remove(data int) {
+	deletingTree(this.Root, data)
+}
+func deletingTree(node *Node, data int) *Node {
+	if node == nil {
+		return nil
+	}
+	if data > node.Data {
+		node.Right = deletingTree(node.Right, data)
+	} else if data < node.Data {
+		node.Left = deletingTree(node.Left, data)
+	} else {
+		// found the node to be deleted
+		if node.Left == nil {
+			return node.Right
+		}
+		if node.Right == nil {
+			return node.Left
+		}
+
+		// Finding the node successor
+
+		temp := node
+		succ := node.Right
+		for succ.Left != nil {
+			temp = succ
+			succ = succ.Left
+		}
+		node.Data = succ.Data
+		if temp == node {
+			temp.Right = succ.Right
+		} else {
+			temp.Left = succ.Right
+		}
+	}
+	return node
+}
+func (this *Tree) Getroot() *Node {
+	return this.Root
+}
 
 func (this *Tree) Contains(data int) bool {
 	return checkContains(this.Root, data)
